@@ -22,6 +22,167 @@
 
 <body>
 
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>HOME</h1>
+	</div>
+
+	<div data-role="content">
+
+		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search..." data-inset="true">  
+		</ul></br >
+
+		<a href="#" data-role="button">Log-In</a>
+		<a href="#list" data-role="button">New List</a></br >
+		<label for="current" class="clist">Current Lists(s)</label>
+			<select name="current" id="current">
+			    <option value="ulist1">User List 1</option>
+			    <option value="ulist2">User List 2</option>
+			    <option value="ulist3">User List 3</option>
+			    <option value="ulist4">User List 4</option>
+			</select>
+
+		<a href="#" data-role="button">Edit List(s)</a>
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+</div><!--end home page-->
+
+<div data-role="page" id="user">
+	<div data-role="header">
+		<h1>New User</h1>
+	</div>
+
+	<div data-role="content">
+
+		<label for="fname">First Name:</label>
+		<input type="text" name="fname" id="fname" value="">
+		<label for="lname">Last Name:</label>
+		<input type="text" name="lname" id="lname" value="">
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" value="">
+		<label for="tel">Telephone:</label>
+		<input type="tel" name="tel" id="tel" value="">
+
+		<a href="#" data-role="button">Submit</a>
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end user page-->
+
+<div data-role="page" id="list">
+	<div data-role="header">
+		<h1>NEW LIST</h1>
+	</div>
+
+	<div data-role="content">
+
+		<a href="#" data-role="button">Add New List</a>
+
+		
+		<label for="categories" class="select">Multi-select with optgroups, custom icon and position:</label>
+			<select name="categories" id="categories" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+			    <option>Categories:</option>
+			    <optgroup label="Pre-Set">
+			        <option value="Fruits" selected="">Fruits</option>
+			        <option value="Vegetables">Vegetables</option>
+			        <option value="Meat">Meat</option>
+			        <option value="Dairy">Dairy</option>
+			    </optgroup>
+			    <optgroup label="Custom">
+			        <option value="">Add New</option>
+			        <option value="">Add New</option>
+			        <option value="">Add New</option>
+			    </optgroup>
+			</select>
+
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end new list page-->
+
+<div data-role="page" id="settings">
+	<div data-role="header">
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+
+
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end settings page-->
+
+
+
+
+
+
+
+
+
 
 
 	
