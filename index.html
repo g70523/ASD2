@@ -43,6 +43,8 @@
 			</select>
 
 		<a href="#" data-role="button">Edit List(s)</a>
+		<a href="#json" data-role="button">JSON</a>
+		<a href="#xml" data-role="button">XML</a>
 
 	</div>
 
@@ -66,8 +68,8 @@
 		<h1>New User</h1>
 	</div>
 
-	<div data-role="content">
-
+	<div id="userContent" data-role="content">
+	<form action="#" method="post" id="form">	
 		<label for="fname">First Name:</label>
 		<input type="text" name="fname" id="fname" value="">
 		<label for="lname">Last Name:</label>
@@ -76,9 +78,10 @@
 		<input type="email" name="email" id="email" value="">
 		<label for="tel">Telephone:</label>
 		<input type="tel" name="tel" id="tel" value="">
-
-		<a href="#" data-role="button">Submit</a>
-
+	
+		<input id="button" type="button" value="SUBMIT">
+		</form>
+	<div id="userInfo"></div>
 	</div>
 
 
@@ -174,6 +177,33 @@
 
 
 </div><!--end settings page-->
+<div data-role="page" id="xml">
+	<div data-role="header">
+		<h1>XML</h1>
+	</div>
+
+	<div id="xmlContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+
+
 
 
 
