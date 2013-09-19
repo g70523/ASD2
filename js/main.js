@@ -6,11 +6,11 @@
 
 $('#user').on('pageinit', function(){
 
-	var users = $('<input id="show" type="button" value="SHOW USERS">').appendTo($('#userContent'));
-	users.on('click', showUser);
+//	var users = $('<input id="show" type="button" value="SHOW USERS">').appendTo($('#userContent'));
+//	users.on('click', showUser);
 
-	var form = $('<input id="showForm" type="button" value="SHOW FORM">').appendTo($('#userContent'));
-	form.on('click', showForm);
+//	var form = $('<input id="showForm" type="button" value="SHOW FORM">').appendTo($('#userContent'));
+//	form.on('click', showForm);
 
 	$('#button').on('click', function(){
 		var form = $('#form').serializeArray();
@@ -20,50 +20,52 @@ $('#user').on('pageinit', function(){
 
 	});
 
-	function showForm(){
-		$('#form').show();
-		$('#userInfo').hide();
+});//End #USER page
 
-	}
-	function showUser(){
+$("#local").on('pageinit', function(){
 
-	$('#form').hide();
+	//console.log(localStorage);
+
 	for(var i=0, x = localStorage.length; i<x; i++){
-			var newDiv  = $('<div class="newDiv">'+'</div>'+'</br>').appendTo('#userInfo');
+			var newDiv  = $('<div class="newDiv">'+'</div>'+'</br>').appendTo('#locContent');
 			var navLi	= $('<ul class="nav"></ul>').appendTo(newDiv);
 			var key 	= localStorage.key(i);
 			var value   = localStorage.getItem(key);
 			var json 	= JSON.parse(value);
+			for(var n in json){
+				var display = json[n].name+": "+json[n].value;
+				$('<p>'+ display + '</p>').appendTo('#locContent');
+			}
 
 			var link = $('<a href="#" class="edit">EDIT</a>');
 			link.key = key;
 			link.css("padding", "20px");
 			link.css("text-decoration", "none");
 			link.css("color", "red");
-			link.appendTo(navLi);
+			link.prependTo(navLi);
 
 			var kill = $('<a href="#" class="delete">DELETE</a>');
 			kill.css("text-decoration","none");
 			kill.css("color", "red");
 			kill.key = key;
 			var userDel = $('.delete');
-	
-			kill.appendTo(navLi);
-
-
-			for(var n in json){
-				var display = json[n].name+": "+json[n].value;
-				$('<p>'+ display + '</p>').appendTo('#userInfo');
-			}
-		
+			kill.prependTo(navLi);
 		
 		}
-};
+//};	
+		var homeButton = $('<a href="#home" data-role="button">HOME</a>');
+		$(homeButton).css({"text-decoration":"none",
+						"color":"black",
+						"display":"block",
+						"border":"solid 1px black",
+						"padding":"10px",
+						"text-align":"center",
+						"text-shadow":"none",
+						"background-color":"green",
+						"border-radius":"10px"});
+			$(homeButton).appendTo('#locContent');
 
-
-
-
-});
+});//END #LOCALSTORAGE page
 
 $("#json").on('pageinit', function(){
 
@@ -108,6 +110,33 @@ $('#xml').on('pageinit', function(){
             url: "xhr/user.xml",
             dataType: "xml",
             success: function(xml) {
+
+            	$(xml).find('items').each(function(){
+            		$(this).find('item').each(function(){
+            			var name 			= $(this).find('name').text();
+            			var food 			= $(this).find('food').text();
+             			var list  			= $(this).find('list').text(); 	
+            			var location  		= $(this).find('location').text();
+
+            			$('<div class="xcontent">'+
+            				'<h2>'+"Name: "+name+'</h2>'+
+            				'<p>'+"Food: "+food+'</p>'+
+            				'<p>'+"List: "+list+'</p>'+
+            				'<p>'+"Location: "+location+'</p>'+
+            				'</div>').appendTo('#xmlContent')
+            		});
+            	});
+            var homeButton = $('<a href="#home" data-role="button">HOME</a>');
+			$(homeButton).css({"text-decoration":"none",
+						"color":"black",
+						"display":"block",
+						"border":"solid 1px black",
+						"padding":"10px",
+						"text-align":"center",
+						"text-shadow":"none",
+						"background-color":"green",
+						"border-radius":"10px"});
+			$(homeButton).appendTo('#xmlContent');	
 
             }
 
