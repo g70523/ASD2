@@ -32,11 +32,17 @@
 		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search..." data-inset="true">  
 		</ul></br >
 
+<<<<<<< HEAD
 
 		<a href="#user" data-role="button" data-theme="b">New User</a>
 		<a href="#" data-role="button" data-theme="e">Log-In</a>
 		</br >
 		<label for="current" class="clist">Current Lists(s)</label>
+=======
+		<a href="#" data-role="button" data-theme="e">Log-In</a>
+		<a href="#user" data-role="button" data-theme="b">New User</a></br >
+	<!--	<label for="current" class="clist">Current Lists(s)</label>
+>>>>>>> gh-pages
 			<select name="current" id="current">
 			    <option value="ulist1">User List 1</option>
 			    <option value="ulist2">User List 2</option>
@@ -44,7 +50,11 @@
 			    <option value="ulist4">User List 4</option>
 			</select>
 
-		<a href="#" data-role="button">Edit List(s)</a>
+		<a href="#" data-role="button">Edit List(s)</a>-->
+		<a href="#local" data-role="button">Local Storage</a>
+		<a href="#json" data-role="button">JSON</a>
+		<a href="#xml" data-role="button">XML</a>
+
 
 	</div>
 
@@ -68,9 +78,14 @@
 		<h1>New User</h1>
 	</div>
 
+<<<<<<< HEAD
 	<div data-role="content">
 
 	<form id="form" action="#" method="post">
+=======
+	<div id="userContent" data-role="content">
+	<form action="#" method="post" id="form">	
+>>>>>>> gh-pages
 		<label for="fname">First Name:</label>
 		<input type="text" name="fname" id="fname" value="">
 		<label for="lname">Last Name:</label>
@@ -80,8 +95,14 @@
 		<label for="tel">Telephone:</label>
 		<input type="tel" name="tel" id="tel" value="">
 	</form>
+<<<<<<< HEAD
 		<a href="#" data-role="button">Submit</a>
 
+=======
+		<input id="button" type="button" value="SUBMIT">
+		
+	<div id="userInfo"></div>
+>>>>>>> gh-pages
 	</div>
 
 
@@ -177,6 +198,82 @@
 
 
 </div><!--end settings page-->
+<div data-role="page" id="xml">
+	<div data-role="header">
+		<h1>XML</h1>
+	</div>
+
+	<div id="xmlContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+<div data-role="page" id="json">
+	<div data-role="header">
+		<h1>JSON</h1>
+	</div>
+
+	<div id="jsonContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+	<div data-role="page" id="local">
+	<div data-role="header">
+		<h1>Local Storage</h1>
+	</div>
+
+	<div id="locContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+
 
 
 
