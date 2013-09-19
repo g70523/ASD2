@@ -32,9 +32,9 @@
 		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search..." data-inset="true">  
 		</ul></br >
 
-		<a href="#" data-role="button">Log-In</a>
-		<a href="#list" data-role="button">New List</a></br >
-		<label for="current" class="clist">Current Lists(s)</label>
+		<a href="#" data-role="button" data-theme="e">Log-In</a>
+		<a href="#user" data-role="button" data-theme="b">New User</a></br >
+	<!--	<label for="current" class="clist">Current Lists(s)</label>
 			<select name="current" id="current">
 			    <option value="ulist1">User List 1</option>
 			    <option value="ulist2">User List 2</option>
@@ -42,9 +42,11 @@
 			    <option value="ulist4">User List 4</option>
 			</select>
 
-		<a href="#" data-role="button">Edit List(s)</a>
+		<a href="#" data-role="button">Edit List(s)</a>-->
+		<a href="#local" data-role="button">Local Storage</a>
 		<a href="#json" data-role="button">JSON</a>
 		<a href="#xml" data-role="button">XML</a>
+
 
 	</div>
 
@@ -78,9 +80,9 @@
 		<input type="email" name="email" id="email" value="">
 		<label for="tel">Telephone:</label>
 		<input type="tel" name="tel" id="tel" value="">
-	
+	</form>
 		<input id="button" type="button" value="SUBMIT">
-		</form>
+		
 	<div id="userInfo"></div>
 	</div>
 
@@ -202,7 +204,56 @@
 
 </div>
 	</div>
+<div data-role="page" id="json">
+	<div data-role="header">
+		<h1>JSON</h1>
+	</div>
 
+	<div id="jsonContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+	<div data-role="page" id="local">
+	<div data-role="header">
+		<h1>Local Storage</h1>
+	</div>
+
+	<div id="locContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
 
 
 
