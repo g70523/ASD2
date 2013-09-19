@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<!-- Louise Whitney, 1309, ASD Project 1-->
+
+<head>
+<meta charset="utf-8">
+	
+	<title>SHOPPING LIST</title>
+	
+	<!--  Mobile viewport optimized: j.mp/bplateviewport -->
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<!-- Mobile IE needs ClearType for smoothing fonts -->
+	
+	<meta http-equiv="cleartype" content="on">
+
+<link rel="stylesheet" type="text/css" href="css/jquery.mobile-1.3.2.min.css">	
+<link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+
+<body>
+
+<div data-role="page" id="home">
+	<div data-role="header">
+		<h1>HOME</h1>
+	</div>
+
+	<div data-role="content">
+
+		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search..." data-inset="true">  
+		</ul></br >
+
+		<a href="#" data-role="button" data-theme="e">Log-In</a>
+		<a href="#user" data-role="button" data-theme="b">New User</a></br >
+	<!--	<label for="current" class="clist">Current Lists(s)</label>
+			<select name="current" id="current">
+			    <option value="ulist1">User List 1</option>
+			    <option value="ulist2">User List 2</option>
+			    <option value="ulist3">User List 3</option>
+			    <option value="ulist4">User List 4</option>
+			</select>
+
+		<a href="#" data-role="button">Edit List(s)</a>-->
+		<a href="#local" data-role="button">Local Storage</a>
+		<a href="#json" data-role="button">JSON</a>
+		<a href="#xml" data-role="button">XML</a>
+
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+</div><!--end home page-->
+
+<div data-role="page" id="user">
+	<div data-role="header">
+		<h1>New User</h1>
+	</div>
+
+	<div id="userContent" data-role="content">
+	<form action="#" method="post" id="form">	
+		<label for="fname">First Name:</label>
+		<input type="text" name="fname" id="fname" value="">
+		<label for="lname">Last Name:</label>
+		<input type="text" name="lname" id="lname" value="">
+		<label for="email">Email:</label>
+		<input type="email" name="email" id="email" value="">
+		<label for="tel">Telephone:</label>
+		<input type="tel" name="tel" id="tel" value="">
+	</form>
+		<input id="button" type="button" value="SUBMIT">
+		
+	<div id="userInfo"></div>
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end user page-->
+
+<div data-role="page" id="list">
+	<div data-role="header">
+		<h1>NEW LIST</h1>
+	</div>
+
+	<div data-role="content">
+
+		<a href="#" data-role="button">Add New List</a>
+
+		
+		<label for="categories" class="select">Multi-select with optgroups, custom icon and position:</label>
+			<select name="categories" id="categories" multiple="multiple" data-native-menu="false" data-icon="grid" data-iconpos="left">
+			    <option>Categories:</option>
+			    <optgroup label="Pre-Set">
+			        <option value="Fruits" selected="">Fruits</option>
+			        <option value="Vegetables">Vegetables</option>
+			        <option value="Meat">Meat</option>
+			        <option value="Dairy">Dairy</option>
+			    </optgroup>
+			    <optgroup label="Custom">
+			        <option value="">Add New</option>
+			        <option value="">Add New</option>
+			        <option value="">Add New</option>
+			    </optgroup>
+			</select>
+
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end new list page-->
+
+<div data-role="page" id="settings">
+	<div data-role="header">
+		<h1>Settings</h1>
+	</div>
+
+	<div data-role="content">
+
+
+
+	</div>
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+
+
+
+</div><!--end settings page-->
+<div data-role="page" id="xml">
+	<div data-role="header">
+		<h1>XML</h1>
+	</div>
+
+	<div id="xmlContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+<div data-role="page" id="json">
+	<div data-role="header">
+		<h1>JSON</h1>
+	</div>
+
+	<div id="jsonContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+	<div data-role="page" id="local">
+	<div data-role="header">
+		<h1>Local Storage</h1>
+	</div>
+
+	<div id="locContent" data-role="content"></div>
+
+
+
+
+
+
+
+<div data-role="footer">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#home">Home</a></li>
+            <li><a href="#user">User</a></li>
+            <li><a href="#settings">Settings</a></li>
+		</ul>
+	</div>
+
+
+</div>
+	</div>
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	<script type="text/javascript" src="js/lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+
+
+
+</html>

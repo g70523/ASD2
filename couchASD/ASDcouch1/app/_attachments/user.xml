@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<items>
+    <item>
+        <name>Bob Boogie</name>
+        <food>Burgers</food>
+        <list>6</list>
+        <location>North America</location>
+    </item>
+    <item>
+        <name>Willy Walky</name>
+        <food>Steak</food>
+        <list>10</list>
+        <location>South America</location>
+    </item>
+</items> 
+
