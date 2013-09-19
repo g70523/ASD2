@@ -32,8 +32,10 @@
 		<ul data-role="listview" data-filter="true" data-filter-reveal="true" data-filter-placeholder="Search..." data-inset="true">  
 		</ul></br >
 
-		<a href="#" data-role="button">Log-In</a>
-		<a href="#list" data-role="button">New List</a></br >
+
+		<a href="#user" data-role="button" data-theme="b">New User</a>
+		<a href="#" data-role="button" data-theme="e">Log-In</a>
+		</br >
 		<label for="current" class="clist">Current Lists(s)</label>
 			<select name="current" id="current">
 			    <option value="ulist1">User List 1</option>
@@ -68,6 +70,7 @@
 
 	<div data-role="content">
 
+	<form id="form" action="#" method="post">
 		<label for="fname">First Name:</label>
 		<input type="text" name="fname" id="fname" value="">
 		<label for="lname">Last Name:</label>
@@ -76,7 +79,7 @@
 		<input type="email" name="email" id="email" value="">
 		<label for="tel">Telephone:</label>
 		<input type="tel" name="tel" id="tel" value="">
-
+	</form>
 		<a href="#" data-role="button">Submit</a>
 
 	</div>
