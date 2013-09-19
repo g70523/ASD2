@@ -6,17 +6,13 @@
 
 $('#user').on('pageinit', function(){
 
-//	var users = $('<input id="show" type="button" value="SHOW USERS">').appendTo($('#userContent'));
-//	users.on('click', showUser);
-
-//	var form = $('<input id="showForm" type="button" value="SHOW FORM">').appendTo($('#userContent'));
-//	form.on('click', showForm);
+	$('#form').trigger('reset');
 
 	$('#button').on('click', function(){
 		var form = $('#form').serializeArray();
 		var key = Math.floor(Math.random()*1000001);
 		localStorage.setItem(key, JSON.stringify(form));
-		showUser();
+		location.reload();
 
 	});
 
@@ -53,6 +49,21 @@ $("#local").on('pageinit', function(){
 		
 		}
 //};	
+		var clearButton = $('<a href="#home" data-role="button">Clear localStorage</a>'+'</br>');
+			$(clearButton).css({"text-decoration":"none",
+						"color":"black",
+						"display":"block",
+						"border":"solid 1px black",
+						"padding":"10px",
+						"text-align":"center",
+						"text-shadow":"none",
+						"background-color":"green",
+						"border-radius":"10px"});
+			$(clearButton).on('click',function(){
+				localStorage.clear();
+				location.reload();
+			});
+			$(clearButton).appendTo('#locContent');
 		var homeButton = $('<a href="#home" data-role="button">HOME</a>');
 		$(homeButton).css({"text-decoration":"none",
 						"color":"black",
